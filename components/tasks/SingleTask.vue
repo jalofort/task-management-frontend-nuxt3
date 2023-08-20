@@ -1,5 +1,7 @@
 <template>
    <div class="rounded-lg p-3 mt-3 bg-[var(--c6)]">
+
+      <!-- Task form component for new task -->
       <TasksTaskForm
          v-if="task.new"
          :task="task"
@@ -8,6 +10,7 @@
          @removeNewTaskForm="removeNewTaskForm(groupIndex, taskIndex)"
       />
 
+      <!-- Task form component for editing task -->
       <TasksTaskForm
          v-else-if="task.edit"
          :task="task"
@@ -16,6 +19,7 @@
          @removeNewTaskForm="removeNewTaskForm(groupIndex, taskIndex)"
       />
 
+      <!-- Task information -->
       <div v-else>
          <p class="mb-2" @dblclick="enableEditingTask()">{{ task.title }}</p>
          <p class="text-sm italic" @dblclick="enableEditingTask()">
@@ -89,10 +93,6 @@ const updateTaskCompletionStatus = (task) => {
       isCompleted: !task.is_completed,
    });
 };
-
-// const updateTask = (taskID) => {
-//    updateTaskRequest.value = useUpdateTask(taskID);
-// };
 
 watch(
    () => updateTaskRequest.value?.isFinished,

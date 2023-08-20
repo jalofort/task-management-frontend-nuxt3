@@ -13,7 +13,8 @@ export const ar = {
    Deleted: "تم الحذف",
    "Delete group": "حذف مجموعة",
    Digit: "رقم",
-   "* Double click on elements for editing":"انقر على العناصر مرتين لإتاحة التعديل",
+   "* Double click on elements for editing":
+      "انقر على العناصر مرتين لإتاحة التعديل",
    /* E */
    Email: "البريد الالكتروني",
    /* F */
@@ -49,7 +50,7 @@ export const ar = {
    "Please, enter a valid email": "يرجي ادخال بريد الكتروني صالح",
    "Please, enter your password": "يرجي ادخال كلمة المرور",
    "Please, check your email and password": "يرجي التأكد من البيانات المدخلة",
-   "": "",
+   "Please, check your internet connection": "يرجي التأكد من الاتصال بالانترنت",
    /* Q */
    /* R */
    Register: "تسجيل",

@@ -2,8 +2,9 @@ import isOnline from "is-online";
 import { notify } from "./useNotifications";
 
 export const useCheckConnectionToServer = async () => {
+   const { $t } = useNuxtApp();
    const internetAvailable = await isOnline();
    if (!internetAvailable)
-      notify("danger", ["يرجي التأكد من الاتصال بالانترنت"], 10);
-   else notify("danger", ["الخادم معطل ، يرجي ابلاغ مسئول النظام"], 10);
+      notify("danger", [$t('Please, check your internet connection')], 10);
+   else notify("danger", [$t("Internal server error")], 10);
 };
